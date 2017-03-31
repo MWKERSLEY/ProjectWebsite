@@ -1,0 +1,64 @@
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    z-index: 0;
+    /*
+    font-family: 'Ek Mukta', sans-serif;
+    font-size: 1em;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;*/
+}
+/** {margin:0;padding:0;}*/
+
+footer {
+    
+}
+
+header {
+    background-color: green;
+    
+}
+
+footer p {
+    position: relative;
+    float: right;
+    right: 5%;
+    
+}
+
+
+.menuDiv {
+    margin: auto;
+    width: 55%;
+    background-color: aqua;
+    overflow: auto;
+}
+
+.navBar {
+    background-color: red;
+    position: fixed;
+}
+
+.navBar ul {
+    margin:0;
+    padding:0;
+}
+
+.navList {
+    position: relative;
+    list-style: none;
+    display: inline-block;
+    border-style: solid;
+    border-width: medium;
+    padding: 2px 5px;
+    width: 10%;
+    text-align: center;
+}
+
+.bodySection {
+    clear: both;
+}
+
