@@ -1,25 +1,331 @@
-body {
+@font-face {
+    font-family: 'Mignon-Bold';
+    src:url('/fonts/Mignon-Bold.ttf.woff') format('woff'),
+        url('/fonts/Mignon-Bold.ttf.svg#Mignon-Bold') format('svg'),
+        url('/fonts/Mignon-Bold.ttf.eot'),
+        url('/fonts/Mignon-Bold.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AquilineTwo';
+    src:url('/fonts/AquilineTwo.ttf.woff') format('woff'),
+        url('/fonts/AquilineTwo.ttf.svg#AquilineTwo') format('svg'),
+        url('/fonts/AquilineTwo.ttf.eot'),
+        url('/fonts/AquilineTwo.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+@keyframes updateBrand {
+    0%      {opacity: 0;}
+    100%    {opacity: 1;}
+}
+
+/*font-family: 'Roboto', sans-serif;*/
+
+html, body {
     width: 100%;
     margin: 0;
     padding: 0;
     z-index: 0;
-    /*
-    font-family: 'Ek Mukta', sans-serif;
+    /*font-family: 'Mignon-Bold', serif;*/
+    font-family: 'Roboto', sans-serif;
     font-size: 1em;
-    width: 100%;
+    overflow-x: hidden;
+    color: black;
+}
+
+.bodySection {
+    clear: both;
+    position: relative;
+    height: 1000px;
+    border-bottom: 15px solid rgba(54, 91, 70, 0.8);
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-position: center 0;
+    width: 100% !important;
+    overflow: hidden;
+}
+
+
+/*home section*/
+#home {
+    background-image: url(/images/mainpic2.jpg);
+    height: 100vh;
+}
+.mouse {
+    position: absolute;
+    display: block;
+    top: 85%;
+    left: 50%;
+    width: 2px;
+    height: 6px;
+    margin: -30px 0 0 -1px;
+    background: white;
+    
+}
+
+.scrollD {
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 45px;
+    margin: 0 auto 20px;
+    top: 75vh;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 2px solid rgba(54, 91, 70, 1);
+    background-color: rgba(54, 91, 70, 0.5);
+    z-index: 10;
+}
+
+.scrollD:hover {
+    
+    border: 2px solid rgba(255, 255, 255, 0.6);
+}
+
+.fa-arrow-down {
+    
+    color: white;
+    font-weight: lighter;
+}
+/*home section end*/
+
+/*About us section*/
+#aboutUs {
+    background-image: url(/images/fish.jpg);
+    background-position: center 35%;
+}
+
+h1, h2, h3 {
     margin: 0;
     padding: 0;
-    overflow-x: hidden;*/
 }
-/** {margin:0;padding:0;}*/
 
+.aboutUsText {
+    background-color: rgba(230, 255, 230, 0.5);
+    z-index: 10;
+    margin: 75px auto;
+    padding: 3%;
+    font-size: 1.1em;
+    width: 800px;
+}
+
+
+.aboutUsText h1 {
+    text-align: center;
+    margin: 10px;
+}
+
+.aboutUsText h2 {
+    text-align: center;
+    margin: 10px;
+}
+.aboutUsText p {
+    margin: 10px;
+}
+.aboutUsText li {
+    margin: 10px;
+}
+.aboutUsText ul {
+    column-count: 2;
+    margin: 10px;
+}
+
+/*About us section end*/
+
+/*gallery section*/
+#gallery {
+    background-image: url(/images/mainpic2.jpg);
+    height: 100vh;
+}
+
+
+/*gallery section end*/
+
+/*Menu List*/
+.menu {
+/*    position:relative;*/
+    z-index: 100;
+    height: 75px;
+    width: 100%;
+    color: rgb(1, 50, 1);
+    background-color: rgb(1, 70, 1);
+    position: fixed;
+    font-size: 1.3em;
+    overflow: hidden;
+    border-bottom: thick solid black;
+}
+.menuList {
+    position:fixed;
+    right:10%;top:25px;
+    margin: 0 auto 0 auto;  
+    width:500;
+    list-style:none;
+    padding:0;
+}
+
+.menuList li {
+    float:left;
+    /*font-family: 'AquilineTwo', cursive;*/
+    font-family: 'Roboto', sans-serif;
+}
+
+.menuList a {
+    display:block;
+    text-align:center;
+    width:100px;
+    text-decoration:none;
+    color: rgb(233,238,235);
+    border-radius: 50px;
+    background-color: rgba(1, 70, 1, 0.95);
+}
+
+.menuList a:hover {
+    display:block;
+    text-align:center;
+    text-decoration:none;
+    color: rgb(240,256,240);
+    background-color: rgba(1, 50, 1, 0.95);
+    width:100px;
+    z-index: 10000;
+    /*border: 2px solid black;*/
+}
+/*Menu List End*/
+
+/*brand*/
+
+.brand {
+    position: fixed;
+    text-align: center;
+    top: 0;
+    left: 5%;
+    background-color: transparent;
+    height: 75px;
+    width: 200px;
+    z-index: 1000;
+    color: rgb(233,238,235);
+}
+
+.brandTop {
+    font-family: 'Mignon-Bold', serif;
+    position: absolute;
+    top: 0;
+    font-size: 1.6em;
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+}
+
+.brandBottom {
+    font-family: 'AquilineTwo', cursive;
+    position: absolute;
+    top: 6px;
+    font-size: 1.5em;
+    width: 100%;
+    text-align: center;
+}
+
+/*brand End*/
+
+/*logo*/
+
+.logo {
+    position: absolute;
+    top: 20vh;
+    background-color: rgba(1, 127, 1, 0.2);
+    height: 25vh;
+    width: 100%;
+}
+
+.logoTop {
+    font-family: 'Mignon-Bold', serif;
+    position: absolute;
+    top: 0;
+    font-size: 7vh;
+    width: 100%;
+    text-align: center;
+    color: rgb(1, 50, 1);
+    -webkit-animation-name: updateBrand;
+    -webkit-animation-duration: 2s;
+    animation-name: updateBrand;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    z-index: 10;
+}
+
+.logoBottom {
+    font-family: 'AquilineTwo', cursive;
+    position: absolute;
+    top: 0.4vh;
+    font-size: 8.5vh;
+    width: 100%;
+    text-align: center;
+    -webkit-animation-name: updateBrand;
+    -webkit-animation-duration: 2s;
+    animation-name: updateBrand;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+/*logo End*/
+
+/*address*/
+.addressElements {
+    float: left;
+    background-color: rgba(230, 255, 230, 0.5);
+    z-index: 10;
+    margin: 5%;
+    font-size: 1.1em;
+    display: inline-block;
+    
+}
+.homeAddress {
+    display: inline-block;
+    margin: 5px;
+    
+}
+.details {
+    display: inline-block;
+    margin: 5px 15px;
+    
+}
+.details a, h3 {
+    display: inline-block;
+    
+}
+
+.details img {
+    top: 55px;
+}
+
+address {
+    font-style: normal;
+}
+
+.contactFormSection {
+    clear: both;
+    float: left;
+    background-color: rgba(230, 255, 230, 0.5);
+    z-index: 10;
+    margin: 5%;
+    font-size: 1.1em;
+    display: inline-block;
+    padding: 15px;
+}
+/*address end*/
+
+/*Footer Section*/
 footer {
-    
-}
-
-header {
-    background-color: green;
-    
+    clear: both;
+    background-color: rgba(54, 91, 70, 0.8);
+    height: 4em;
+    font-size: 0.8em;
 }
 
 footer p {
@@ -28,37 +334,12 @@ footer p {
     right: 5%;
     
 }
+/*Footer Section End*/
 
-
-.menuDiv {
-    margin: auto;
-    width: 55%;
-    background-color: aqua;
-    overflow: auto;
+/*media queries*/
+@media screen and (min-width: 320px) and (max-width: 480px) {
 }
-
-.navBar {
-    background-color: red;
-    position: fixed;
+@media screen and (min-width: 481px) and (max-width: 640px) {
 }
-
-.navBar ul {
-    margin:0;
-    padding:0;
+@media screen and (min-width: 641px) and (max-width: 850px) {
 }
-
-.navList {
-    position: relative;
-    list-style: none;
-    display: inline-block;
-    border-style: solid;
-    border-width: medium;
-    padding: 2px 5px;
-    width: 10%;
-    text-align: center;
-}
-
-.bodySection {
-    clear: both;
-}
-
